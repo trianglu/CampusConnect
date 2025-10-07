@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+<section class="event-details">
+    <img src="<%= event.image %>" alt="<%= event.title %> image" />
+    <h2><%= event.title %></h2>
+    <p><strong>Category:</strong> <%= event.category %></p>
+    <p><strong>Host:</strong> <%= event.author.firstName %> <%= event.author.lastName %></p>
+    <p><strong>Location:</strong> <%= event.location %></p>
+    <p><strong>Start:</strong> <%= event.startDateTime %></p>
+    <p><strong>End:</strong> <%= event.endDateTime %></p>
+    <div class="event-description">
+        <%= event.details %>
+    </div>
+    <% if (user) { %>
+        <% if (!isAuthor) { %>
+          <p>Will you be attending this event?</p>
+          <form action="/events/<%= event._id %>/rsvp" method="POST">
+            <button type="submit" name="status" value="YES">Yes</button>
+            <button type="submit" name="status" value="NO">No</button>
+            <button type="submit" name="status" value="MAYBE">Maybe</button>
+          </form>
+        <% } else { %>
+          <p>You cannot RSVP to your own event.</p>
+        <% } %>
+    <% } else { %>
+      <p><a href="/users/login">Log in</a> to RSVP.</p>
+    <% } %>
+    
+    <p>Total Going: <%= yesCount %></p>
+      
+<%- include('../partials/footer') %>

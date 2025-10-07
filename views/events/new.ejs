@@ -1,0 +1,42 @@
+<%- include('../partials/header') %>
+
+<div class="content">
+  <h2>Create a New Event</h2>
+  
+  <form action="/events" enctype="multipart/form-data" method="POST" class="new-form">
+    
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="category">Category</label>
+    <select name="category" id="category">
+      <option value="Tech">Tech</option>
+      <option value="Wellness">Wellness</option>
+      <option value="Arts">Arts</option>
+      <option value="Networking">Networking</option>
+        <option value="Sports">Sports</option>
+        <option value="Food">Food</option>
+        <option value = "Music">Music</option>
+    </select>
+
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="startDateTime">Start Date & Time</label>
+    <input type="datetime-local" id="startDateTime" name="startDateTime" required>
+
+    <label for="endDateTime">End Date & Time</label>
+    <input type="datetime-local" id="endDateTime" name="endDateTime" required>
+
+    <label for="details">Details</label>
+    <textarea id="details" name="details" rows="5" required></textarea>
+
+    <label for="image">Image URL</label>
+    <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png">
+
+    <input type="submit" value="Create Event">
+
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

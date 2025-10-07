@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+<section class="intro">
+  <h1>CampusConnect Events</h1>
+  <p>
+    Discover upcoming events on campus! Browse through categories or create your own event.
+  </p>
+  <p>
+    <a href="/events/new" >Create a New Event</a>
+  </p>
+</section>
+
+<% if (Object.keys(groupedEvents).length > 0) { %>
+  <% Object.keys(groupedEvents).forEach(categoryName => { %>
+    <section class="event-category">
+      <h2><%= categoryName.charAt(0).toUpperCase() + categoryName.slice(1) %></h2>
+      <ul>
+        <% groupedEvents[categoryName].forEach(event => { %>
+          <li>
+            <a href="/events/<%= event._id %>">
+              <%= event.title %>
+            </a>
+            <p>
+              Hosted by <%= event.author.firstName %> <%= event.author.lastName %><br>
+              <strong>Start:</strong> <%= event.startDateTime %><br>
+              <strong>End:</strong> <%= event.endDateTime %>
+            </p>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+  <% }) %>
+<% } else { %>
+  <section class="event-category">
+    <p>No events found. Be the first to 
+      <a href="/events/new">add one!</a>
+    </p>
+  </section>
+<% } %>
+
+<%- include('../partials/footer') %>

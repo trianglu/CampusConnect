@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+<h2>Welcome, <%= user.firstName %> <%= user.lastName %></h2>
+
+<h3>Your Events</h3>
+
+<% if (events.length === 0) { %>
+  <p>You haven’t created any events yet.</p>
+<% } else { %>
+  <ul>
+    <% events.forEach(event => { %>
+      <li>
+        <strong>
+          <a href="/events/<%= event._id %>"><%= event.title %></a>
+        </strong><br>
+        <span><%= event.startDateTime.toDateString() %> - <%= event.location %></span><br>
+        
+        <div class="event-actions">
+            <a href="/events/<%= event._id %>/edit" class ="btn">Edit</a>
+            <form action="/events/<%= event._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+            </form>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<h3>Your RSVPs</h3>
+<% if (rsvps.length === 0) { %>
+    <p>You haven’t signed up for any events yet.</p>
+  <% } else { %>
+<ul>
+  <% rsvps.forEach(rsvp => { %>
+    <li>
+      Event: <a href="/events/<%= rsvp.event._id %>"><%= rsvp.event.title %></a> - 
+      Status: <%= rsvp.status %>
+    </li>
+  <% }) %>
+</ul>
+<% } %>
+
+<%- include('../partials/footer') %>

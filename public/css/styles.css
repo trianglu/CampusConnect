@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fc;
+    color: #333;
+}
+
+header, footer {
+    background-color: #2d3748;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.event-category {
+    margin-bottom: 2rem;
+}
+
+.event-category h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.event-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.event-category li {
+    margin: 0.5rem 0;
+}
+
+.event-category a {
+    color: #2b6cb0;
+    text-decoration: none;
+}
+
+.event-category a:hover {
+    text-decoration: underline;
+}
+
+.event-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }  
+
+.event-details p {
+    margin: 0.5rem 0;
+}
+
+.event-description {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+.event-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    margin-top: 1em;
+    align-items: center;
+}
+
+.event-actions button {
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.event-actions button:hover {
+    background-color: #2c5282;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.75rem;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #2c5282;
+}
+
+.footer-links a {
+    margin: 0 8px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+  
+.social-icons img {
+    width: 24px;
+    margin-left: 8px;
+}
+  
+.social-icons img:hover {
+    opacity: 0.8;
+}
+
+.success {
+    background: rgba(108, 192, 112, 0.7);
+    color: #fff;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    padding: 0.5rem 0;  
+}
+  
+.error {
+    background: rgba(255, 102, 51, 0.7);
+    color: #fff;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+  .btn {
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+.btn:hover {
+    background-color: #2c5282;
+}
+  
