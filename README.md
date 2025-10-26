@@ -20,15 +20,25 @@ It provides an interactive platform for events, announcements, and communication
 ## Project Structure
 
 CampusConnect/
+
 │
+
 ├── controllers/      # Request logic
+
 ├── middleware/       # Custom middlewares
+
 ├── models/           # Mongoose schemas
+
 ├── public/           # Static assets
+
 ├── routes/           # Route definitions
+
 ├── views/            # EJS templates
+
 ├── app.js            # Main application file
+
 ├── package.json      # Dependencies and scripts
+
 └── .gitignore
 
 ---
@@ -37,23 +47,25 @@ CampusConnect/
 
 1. **Clone the repository**
    bash:
+
    git clone https://github.com/trianglu/CampusConnect.git
+
    cd CampusConnect
 
 
-2. **Install dependencies**
+3. **Install dependencies**
 
    bash:
    npm install
 
-3. **Create an environment file**
+4. **Create an environment file**
    Create a .env file in the root directory and add:
 
    PORT=3000
    MONGO_URI=your_mongodb_connection_string
    SESSION_SECRET=your_secret_key
 
-4. **Run the app**
+5. **Run the app**
 
    bash:
    node app.js
@@ -63,7 +75,7 @@ CampusConnect/
    bash:
    npx nodemon app.js
 
-5. **Visit**
+6. **Visit**
 
    http://localhost:3000
 
